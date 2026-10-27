@@ -1,0 +1,81 @@
+% FICTIONAL sample resume (Jane Doe does not exist). Used to test scripts/build.py
+% and to show the expected style: XYZ bullets, absolute baselines, full lines.
+\documentclass[10pt,letterpaper]{article}
+\usepackage[top=0.5in, bottom=0.5in, left=0.5in, right=0.5in]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\pagestyle{empty}
+\titleformat{\section}{\large\bfseries\scshape}{\thesection}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{7pt}{3pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlist[itemize]{leftmargin=*, noitemsep, topsep=0pt, partopsep=0pt, parsep=0pt, itemsep=4pt}
+
+\begin{document}
+
+\begin{center}
+    {\Huge \textbf{\scshape Jane Doe}} \\
+    \vspace{2pt}
+    \small 555-555-0100 $\vert$ jane.doe@example.com $\vert$ github.com/janedoe-example $\vert$ linkedin.com/in/jane-doe-example
+\end{center}
+\vspace{-3pt}
+
+\section*{Education}
+\textbf{Example State University} \hfill Springfield, ST \\[-2pt]
+\textit{B.S. Computer Science $\vert$ Minor in Statistics} \hfill \textit{Expected May 2027}
+\begin{itemize}[noitemsep,topsep=2pt]
+    \item \textbf{Awards:} Dean's List, Example Engineering Scholarship, Hackathon Finalist
+    \item \textbf{Relevant Coursework:} Operating Systems, Distributed Systems, Algorithms, Databases, Computer Networks, Machine Learning
+\end{itemize}
+
+\section*{Experience}
+
+\textbf{Acme Cloud Inc.} \hfill Jun 2026 -- Aug 2026 \\[-2pt]
+\textit{Software Engineer Intern --- Developer Platform} \hfill \textit{Remote}
+\begin{itemize}[noitemsep,topsep=2pt]
+    \item \textbf{Build Cache:} Cut median CI time from 22 min to 6 min across 140 repositories by building a content-addressed dependency cache in Go backed by S3, keyed on lockfile hashes so unchanged services skip reinstalling their packages entirely. Chose a hash-keyed store over a time-based cache after stale entries caused two false-green builds in the prototype.
+    \item \textbf{Flaky Test Triage:} Brought the nightly failure rate for the integration suite from 18 failures per week to 4 by writing a Python service that reruns failures in isolation, tags nondeterministic tests, and files an issue with the last three failing logs attached for the owning team.
+    \item \textbf{Deploy Dashboard:} Reduced time-to-diagnose for failed deploys from roughly 15 minutes to under 3 by implementing a React and FastAPI dashboard that joins deploy events, Kubernetes pod status, and recent commits into one timeline view.
+\end{itemize}
+
+\textbf{Northwind Analytics} \hfill Jan 2026 -- May 2026 \\[-2pt]
+\textit{Data Engineering Intern} \hfill \textit{Springfield, ST}
+\begin{itemize}[noitemsep,topsep=2pt]
+    \item \textbf{Warehouse Pipeline:} Cut the daily sales-report refresh from 3 hours to 25 minutes for 40 analysts by rewriting a sequential Python ETL job as partitioned SQL transformations in PostgreSQL with incremental loads, validated against a week of production data with zero row-count mismatches.
+    \item \textbf{Data Quality Checks:} Caught 31 schema-drift incidents in the first month by adding automated column-type and null-rate checks to the ingestion step, with alerts routed to the owning team's Slack channel.
+\end{itemize}
+
+\textbf{Example Labs (Research Assistant)} \hfill Sep 2025 -- Dec 2025 \\[-2pt]
+\textit{Undergraduate Researcher} \hfill \textit{Springfield, ST}
+\begin{itemize}[noitemsep,topsep=2pt]
+    \item \textbf{Model Evaluation:} Replaced a manual spreadsheet process with a Python harness that evaluates 12 classifier variants on 5 datasets in under 20 minutes, producing reproducible confusion matrices and calibration plots with scikit-learn and Matplotlib.
+\end{itemize}
+
+\section*{Projects}
+\textbf{Tiny Key-Value Store} \hfill \textit{Rust} \\[-2pt]
+\begin{itemize}[noitemsep,topsep=2pt]
+    \item \textbf{Storage Engine:} Built a log-structured key-value store in Rust with a write-ahead log, memtable flushes to sorted files, and background compaction, sustaining 80K writes per second on a laptop in a single-node benchmark.
+\end{itemize}
+
+\textbf{Log Search Tool} \hfill \textit{Go, SQLite} \\[-2pt]
+\begin{itemize}[noitemsep,topsep=2pt]
+    \item \textbf{Indexing:} Cut search latency on 2 GB of application logs from 9 seconds with grep to 120 ms by building an inverted index in SQLite FTS5 with a Go command-line front end, and shipped it as a single static binary used by 15 classmates during a capstone project.
+\end{itemize}
+
+\section*{Leadership}
+\textbf{Example State Computing Club} \hfill Sep 2024 -- Present \\[-2pt]
+\textit{Workshop Lead} \hfill \textit{Springfield, ST}
+\begin{itemize}[noitemsep,topsep=2pt]
+    \item \textbf{Teaching:} Taught a 6-week Git and Linux workshop to 45 first-year students, rewriting the exercises after week 2 when a survey showed 60\% were stuck on merge conflicts, which raised completion of the final lab from 52\% to 84\%.
+\end{itemize}
+
+\section*{Technical Skills}
+
+\textbf{Languages:} Python, Go, Rust, SQL, JavaScript \\[0.5pt]
+\textbf{Frameworks \& Tools:} React, FastAPI, PostgreSQL, Kubernetes, scikit-learn, Matplotlib, Slack API \\[0.5pt]
+\textbf{Interests:} Distributed systems, Developer tooling, Running, Chess
+
+\end{document}
