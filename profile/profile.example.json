@@ -1,0 +1,49 @@
+{
+  "_comment": "Copy to profile.json (git-ignored) and replace with your own data. Optional: it just gives Claude a fast lookup instead of re-parsing your LaTeX every time.",
+  "name": "Your Name",
+  "contact": {
+    "email": "you@example.com",
+    "github": "github.com/your-username",
+    "linkedin": "linkedin.com/in/your-name"
+  },
+  "education": [
+    {
+      "school": "Example University",
+      "degree": "B.S. Computer Science",
+      "dates": "Expected May 2027",
+      "awards": ["Example Scholarship"],
+      "coursework": ["Operating Systems", "Algorithms", "Databases"]
+    }
+  ],
+  "experiences": [
+    {
+      "company": "Example Corp",
+      "title": "Software Engineer Intern",
+      "dates": "Jun 2025 - Aug 2025",
+      "location": "City, ST",
+      "seniority_note": "Short internship: use 'built' / 'implemented', not 'architected' / 'led'.",
+      "tech": ["Python", "Docker", "PostgreSQL"],
+      "facts": [
+        {
+          "claim": "Cut nightly build time from 40 min to 12 min",
+          "baseline": "40 min median over 2 weeks of CI logs",
+          "how": "Added a content-addressed dependency cache",
+          "rejected_alternative": "Bigger CI runners: cost 3x, did not fix cache misses",
+          "evidence": "references/evidence/example-corp/design-doc.pdf"
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Example Project",
+      "repo": "your-username/example-project",
+      "tech": ["Rust"],
+      "facts": ["Implemented X, which did Y"]
+    }
+  ],
+  "skills": {
+    "languages": ["Python", "Rust", "SQL"],
+    "tools": ["Docker", "PostgreSQL"]
+  }
+}
