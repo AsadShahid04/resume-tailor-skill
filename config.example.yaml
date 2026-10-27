@@ -1,0 +1,64 @@
+# resume-tailor configuration
+# Copy to config.yaml (python scripts/init.py does this for you) and fill in.
+# config.yaml is git-ignored so your personal details never get committed.
+# Any value still containing CHANGE_ME makes the skill stop and ask you.
+
+candidate:
+  name: "CHANGE_ME Your Name"
+  email: "CHANGE_ME you@example.com"
+  phone: ""                       # optional, leave empty to omit
+  location: ""                    # optional, e.g. "City, ST"
+  github: "github.com/CHANGE_ME" # shown in the contact line
+  linkedin: ""                    # optional, e.g. "linkedin.com/in/yourname"
+  website: ""                     # optional
+
+paths:
+  # Where tailored resumes are written: one subfolder per role.
+  output_dir: "~/resumes"
+  # Your baseline resume. Created from the template by init.py if missing.
+  general_resume: "~/resumes/general/resume.tex"
+  # Optional structured profile (see profile/profile.example.json).
+  profile: "./profile/profile.json"
+  # Folders of your own primary-source material. Searched recursively.
+  # Add as many as you like; relative paths are relative to this repo.
+  evidence_dirs:
+    - "./references/evidence"
+
+github:
+  username: ""                    # your GitHub login; leave empty to skip
+  verify_open_source: false       # true = check public PRs via the GitHub API
+
+formatting:
+  font_size: "10pt"               # 10pt or 11pt
+  margins_in:                     # inches; NOT a lever for fitting the page
+    top: 0.5
+    bottom: 0.5
+    left: 0.5
+    right: 0.5
+  target_pages: 1
+  min_fill_ratio: 0.95            # build.py fails if text ends above this
+
+rules:
+  # Internal codenames, project names, ticket prefixes etc. that must never
+  # appear on a resume (case-insensitive). Example: ["ProjectFoo", "ABC-"]
+  banned_terms: []
+  # Hollow filler. Defaults shown; add your own.
+  banned_phrases:
+    - "direct experience"
+    - "proven scale experience"
+    - "relevant to"
+    - "familiarity with"
+    - "exposure to"
+    - "understanding of"
+    - "knowledge of"
+  # If non-empty, the Relevant Coursework line must be exactly this list, in
+  # this order (e.g. transcript-verified). Leave empty to disable the check.
+  fixed_coursework: []
+  allow_pr_links: false
+  allow_contributor_titles: false
+
+# Optional commands to run after every tailored resume (e.g. open the PDF).
+# {folder} is replaced with the role folder path.
+post_steps: []
+# post_steps:
+#   - "open {folder}/resume.pdf"

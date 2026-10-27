@@ -1,0 +1,12 @@
+# Python dependencies for the helper scripts (scripts/*.py).
+# Install with:  pip install -r requirements.txt
+#
+# NOT installable via pip — you also need a LaTeX distribution that provides
+# `pdflatex` (see README.md > Prerequisites):
+#   macOS:          brew install --cask mactex-no-gui     (or: brew install basictex)
+#   Ubuntu/Debian:  sudo apt install texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended lmodern
+#   Windows:        install MiKTeX or TeX Live
+
+PyYAML>=6.0          # reads config.yaml
+pdfplumber>=0.10     # counts pages and measures how full the page is
+requests>=2.31       # optional: verifies open-source PRs via the GitHub API
