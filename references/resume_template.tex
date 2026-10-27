@@ -1,0 +1,87 @@
+% Resume template — compiles to a single page with the sample content below.
+% 1. Replace every placeholder (names, dates, <ANGLE BRACKET> text) with your own facts.
+% 2. Reorder sections so the most role-relevant one comes first.
+% 3. Keep every bullet true. Tailoring changes emphasis and wording, never facts.
+\documentclass[10pt,letterpaper]{article}
+\usepackage[top=0.5in, bottom=0.5in, left=0.5in, right=0.5in]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+% Remove page numbers
+\pagestyle{empty}
+
+% Section formatting with minimal spacing
+\titleformat{\section}{\large\bfseries\scshape}{\thesection}{0em}{}[\titlerule]
+\titleformat{\subsection}[runin]{\bfseries}{\thesubsection}{0em}{}[]
+
+% Spacing levers for fitting exactly one page
+\titlespacing*{\section}{0pt}{2pt}{1pt}
+\titlespacing*{\subsection}{0pt}{1pt}{1pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlist[itemize]{leftmargin=*, noitemsep, topsep=0pt, partopsep=0pt, parsep=0pt, itemsep=0.5pt}
+
+\begin{document}
+
+% Header
+\begin{center}
+    {\Huge \textbf{\scshape Your Name}} \\
+    \vspace{2pt}
+    \small 555-555-0100 $\vert$ you@example.com $\vert$ github.com/your-username $\vert$ linkedin.com/in/your-name
+\end{center}
+\vspace{-3pt}
+
+\section*{Education}
+\textbf{<University Name>} \hfill City, ST \\[-2pt]
+\textit{<Degree, Major> $\vert$ <Minor / Certificate>} \hfill \textit{Expected <Month Year>}
+\begin{itemize}[noitemsep,topsep=2pt]
+    \item \textbf{Awards:} <Award One>, <Award Two>, <Award Three>
+    \item \textbf{Relevant Coursework:} <Course One>, <Course Two>, <Course Three>, <Course Four>, <Course Five>, <Course Six>
+\end{itemize}
+\vspace{-2pt}
+
+% OPTIONAL: put an Open Source / Projects section here (above Experience) when the role values it.
+% Describe contributions by impact. Do not put PR numbers or links in the resume.
+%
+% \section*{Open Source Projects}
+% \textbf{<Project Name>} \hfill \textit{<owner/repo>} \\[-2pt]
+% \textit{<One-line description of the project>}
+% \begin{itemize}[noitemsep,topsep=2pt]
+%     \item \textbf{<Short label>:} <Accomplished X, as measured by Y, by doing Z.>
+% \end{itemize}
+
+\section*{Experience}
+
+\textbf{<Company One>} \hfill <Mon YYYY> -- <Mon YYYY> \\[-2pt]
+\textit{<Job Title>} \hfill \textit{City, ST}
+\begin{itemize}[noitemsep,topsep=2pt]
+    \item \textbf{<Label>:} <Accomplished X, as measured by Y (absolute before $\rightarrow$ after, not just a percentage), by doing Z with the specific tools that were central to the work. Add real, accurate detail so the final line of the bullet is nearly full rather than a short stub.>
+    \item \textbf{<Label>:} <Second bullet. Vary the metric shape: time saved, cost reduced, throughput gained, users served.>
+    \item \textbf{<Label>:} <Third bullet. Include a design decision and the alternative you rejected, so an interviewer can ask about it.>
+\end{itemize}
+
+\textbf{<Company Two>} \hfill <Mon YYYY> -- <Mon YYYY> \\[-2pt]
+\textit{<Job Title>} \hfill \textit{City, ST}
+\begin{itemize}[noitemsep,topsep=2pt]
+    \item \textbf{<Label>:} <Accomplished X, as measured by Y, by doing Z. Use verbs that match the real seniority of the role: built, implemented, deployed, contributed to.>
+    \item \textbf{<Label>:} <Second bullet.>
+\end{itemize}
+
+\textbf{<Company Three>} \hfill <Mon YYYY> -- <Mon YYYY> \\[-2pt]
+\textit{<Job Title>} \hfill \textit{City, ST}
+\begin{itemize}[noitemsep,topsep=2pt]
+    \item \textbf{<Label>:} <Accomplished X, as measured by Y, by doing Z.>
+    \item \textbf{<Label>:} <Second bullet.>
+\end{itemize}
+\vspace{-1pt}
+
+\section*{Technical Skills}
+
+\textbf{Languages:} <Language, Language, Language> \\[0.5pt]
+\textbf{Frameworks \& Tools:} <Reorder toward the role. Only list tools that appear in a bullet above.> \\[0.5pt]
+\textbf{Interests:} <Role-relevant first>, <Hobby>, <Hobby>
+
+\end{document}
